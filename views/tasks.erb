@@ -1,0 +1,17 @@
+<h1>Tasks for <%= @cat.description() %> </h1>
+
+<ul>
+  <% (@cat.tasks()).each() do |task| %>
+      <li><%= task.description() %> </li>
+      <% end %>
+</ul>
+
+
+<form class="" action="/cats/<%= @cat.id()%>" method="post">
+  <label for="description">New Task:</label>
+  <input type="text"  name="description">
+  <button type="submit" name="but1">Add Task</button>
+</form>
+
+
+<a href="/">Back</a>

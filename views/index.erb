@@ -1,0 +1,17 @@
+<h1>Your List Categories</h1>
+<ul>
+<% @cats.each() do |cat| %>
+   <li><a href='/cats/<%= cat.id() %>/tasks'><%= cat.description() %></a></li>
+<% end %>
+<br>
+<br>
+<br>
+<div>
+<form class="" action="/new" method="post">
+  <label for="description">New Category:</label>
+  <input type="text"  name="description">
+  <br>
+  <br>
+  <button type="submit" name="but1">Add Category</button>
+</form>
+</div>

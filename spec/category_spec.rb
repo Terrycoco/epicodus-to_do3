@@ -1,16 +1,17 @@
-require('rspec')
-require('pg')
-require('category')
+# require('rspec')
+# require('pg')
+# require('category')
+require('spec_helper')
 
 
-DB = PG.connect({:dbname => 'to_do_test'})
-
-RSpec.configure do |config|
-  config.after(:each) do
-      DB.exec("DELETE from task *;")
-      DB.exec("DELETE from category *;")
-  end
-end
+# DB = PG.connect({:dbname => 'to_do_test'})
+#
+# RSpec.configure do |config|
+#   config.after(:each) do
+#       DB.exec("DELETE from task *;")
+#       DB.exec("DELETE from category *;")
+#   end
+# end
 
 
 
